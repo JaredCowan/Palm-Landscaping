@@ -2,6 +2,6 @@ class StaticPagesController < ApplicationController
   def login
   end
 
-  def test
+  def dashboard
   end
 end

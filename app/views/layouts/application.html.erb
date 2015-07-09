@@ -16,8 +16,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="controller-<%= controller_name %> action-<%= action_name %>">
+   <%= render partial: "layouts/navbar" %>
 
-    <%= yield %>
-
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>
