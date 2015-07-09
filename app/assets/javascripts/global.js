@@ -1,6 +1,7 @@
 !(function($) {
 
   $(document).on("ready", function() {
+
     $("html").niceScroll({
       styler:             "fb",
       cursorcolor:        "#ffcc00",
@@ -11,6 +12,8 @@
       cursorborder:       '',
       zindex:             '1000'
     });
+
+    $("[data-toggle='tooltip']").tooltip();
   });
 
 })(jQuery);

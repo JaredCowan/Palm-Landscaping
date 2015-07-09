@@ -2,11 +2,27 @@
   background-color: $black-background;
   border-color: $black-base;
 
-  .navbar-brand {
+  .navbar-brand, .toggle-sidebar {
     color: $white-base;
     &:hover,
     &:focus {
       color: $yellow-base;
+    }
+  }
+
+  .toggle-sidebar {
+    float: left;
+    padding: 16px 16px 16px 0;
+    font-size: $font-size-large;
+    + .tooltip > .tooltip-inner {
+      color: $yellow-base;
+      font-size: $font-size-med; 
+    }
+
+    @media (max-width: $screen-xs-max) {
+      & {
+        padding: 16px 0 16px 16px;
+      }
     }
   }
 
