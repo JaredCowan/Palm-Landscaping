@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/login'
+  resources :static_pages, only: :index, path: "/:action", as: ":action"
 
   root 'static_pages#login'
-
 end
