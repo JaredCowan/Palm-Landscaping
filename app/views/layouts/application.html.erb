@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>PalmLandscaping</title>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="description" content="<%#= content_for?(:description) ? yield(:description) : I18n.t('brand.name') %>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<%#= brand_name %>">
+    <title>PalmLandscaping</title>
+    <%= favicon_link_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="controller__<%= controller_name %> action__<%= action_name %>">
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>
