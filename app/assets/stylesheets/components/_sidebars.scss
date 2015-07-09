@@ -70,25 +70,21 @@
 //   -webkit-border-radius: 0 0 4px 4px;
 // }
 
-ul.sidebar-menu li ul.sub li a {
-  font-size: 12px;
-  padding: 6px 0;
-  line-height: 35px;
-  height: 35px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  color: #aeb2b7;
-}
+// ul.sidebar-menu li ul.sub li a {
+//   font-size: 12px;
+//   padding: 6px 0;
+//   line-height: 35px;
+//   height: 35px;
+//   -webkit-transition: all 0.3s ease;
+//   -moz-transition: all 0.3s ease;
+//   -o-transition: all 0.3s ease;
+//   -ms-transition: all 0.3s ease;
+//   transition: all 0.3s ease;
+//   color: #aeb2b7;
+// }
 
 ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
   color: #FF6C60;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: block;
 }
@@ -115,10 +111,6 @@ ul.sidebar-menu li a{
   padding: 15px 0 15px 10px;
   font-size: 12px;
   outline: none;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -127,12 +119,6 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
   color: #fff;
   display: block;
   border-radius: 4px;
-  -webkit-border-radius: 4px;
-
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -142,14 +128,6 @@ ul.sidebar-menu li a i {
   padding-right: 6px;
 }
 
-ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
-  color: #FF6C60;
-}
-
-ul.sidebar-menu li a.active i {
-  color: #FF6C60;
-}
-
 @media (max-width: $screen-sm-min) {
 
   #sidebar {
@@ -157,7 +135,6 @@ ul.sidebar-menu li a.active i {
   }
   .sidebar-close #sidebar {
     height: auto;
-    /*overflow: hidden;*/
     overflow-y: auto;
     position: absolute;
     width: 100%;
@@ -178,9 +155,6 @@ ul.sidebar-menu li a.active i {
     padding: 0 10px;
     text-align: left;
   }
-  #sidebar > ul > li > a i{
-    /*display: none !important;*/
-  }
   #sidebar ul > li > a .arrow, #sidebar > ul > li > a .arrow.open {
     margin-right: 10px;
     margin-top: 15px;
@@ -194,9 +168,6 @@ ul.sidebar-menu li a.active i {
   }
   #sidebar > ul > li > ul.sub > li > a {
     background: transparent !important ;
-  }
-  #sidebar > ul > li > ul.sub > li > a:hover {
-    /*background: #4A8BC2 !important ;*/
   }
   #sidebar {
     margin: 0px !important;
