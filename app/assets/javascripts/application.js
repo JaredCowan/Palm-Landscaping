@@ -1,6 +1,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require vendor/bootstrap
+//= require vendor/menu-sidebar
+//= require vendor/scroll-to
+//= require vendor/nicescroll
 //= require js-routes
 //= require no-autocomplete-rails
-//= require static_pages
+//= require global
+//= require components/sidebars

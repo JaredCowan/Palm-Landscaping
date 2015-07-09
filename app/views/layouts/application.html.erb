@@ -15,10 +15,13 @@
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="controller-<%= controller_name %> action-<%= action_name %>">
-   <%= render partial: "layouts/navbar" %>
+  <body class="controller-<%= controller_name %> action-<%= action_name %>" id="container">
+    <% if logged_in? %>
+      <%= render partial: "layouts/navbar" %>
+      <%= render partial: "layouts/sidebar" %>
+    <% end %>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="main__site__content">
       <%= yield %>
     </div>
   </body>

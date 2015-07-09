@@ -2,5 +2,9 @@ body {
   font: unquote("#{$font-size-med} / #{$line-height-small} #{$font-family-base}");
   background-color: $black-background;
   color: $white-base;
+}
+
+#main__site__content {
   padding-top: 70px;
+  margin-left: 210px;
 }
