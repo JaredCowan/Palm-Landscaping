@@ -52,6 +52,13 @@
         background-color: $black-background;
       }
     }
+    .dropdown {
+      > a > .dropdown-img {
+        width: 30px;
+        height: auto;
+        margin: 0 5px;
+      }
+    }
   }
 
   // Darken the responsive nav toggle
