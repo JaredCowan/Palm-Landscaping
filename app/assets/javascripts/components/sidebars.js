@@ -41,11 +41,11 @@
       var $tooltip_inner = $(".tooltip-inner");
 
       if (sidebar) {
-        var _message = "Close Sidebar";
+        var _message = "Open Sidebar";
         $tooltip.attr("data-original-title", _message);
         $tooltip_inner.text(_message);
       } else {
-        var _message = "Open Sidebar";
+        var _message = "Close Sidebar";
         $tooltip.attr("data-original-title", _message);
         $tooltip_inner.text(_message);
       }

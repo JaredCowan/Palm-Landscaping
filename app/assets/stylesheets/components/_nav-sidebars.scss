@@ -1,0 +1,100 @@
+.nav-sidebar {
+  position: fixed;
+  width: 210px;
+  height: 100%;
+  background-color: $black-background;
+
+  ul li {
+    position: relative;
+    list-style-type: none;
+  }
+
+  .sidebar-menu {
+    margin: -4px 0 0;
+    padding: 0;
+    border-right: 1px solid $black-base;
+    &:first-child {
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+    > li > a {
+      color: $white-base;
+      &.active,
+      &:hover, &:focus {
+        color: $yellow-base;
+        background-color: $black-base;
+        > i {
+          color: $yellow-base;
+          background-color: $black-base;
+        }
+      }
+    }
+    .sub-menu {
+      > a {
+        color: $white-base;
+        &:hover, &:focus {
+          color: $yellow-base;
+          background-color: $black-base;
+        }
+      }
+      > .active {
+        color: $yellow-base;
+        background-color: $black-base;
+      }
+    }
+    > li > .sub > li > a {
+      font-size: $font-size-small;
+      padding: 6px 0;
+      line-height: 35px;
+      height: 35px;
+      transition: all 0.3s ease;
+      color: $white-base;
+    }
+    > li > .sub,
+    > li > .sub > li > a {
+      display: block;
+      padding-left: 32px;
+      &:hover, &:focus {
+        color: $yellow-base;
+        background-color: $black-base;
+      }
+    }
+  }
+
+  .sidebar-menu > li > .sub {
+    margin: -4px 0 0;
+    padding: 0;
+    background-color: $black-base;
+    &:first-child {
+      margin: 60px 0 0;
+    }
+    > li {
+      margin: 0;
+      background-color: $black-base;
+      &:last-child {
+        padding-bottom: 10px;
+        border-radius: 0 0 4px 4px;
+      }
+    }
+  }
+
+  .dcjq-icon {
+    position: absolute;
+    display: inline-block;
+    right: 10px;
+    top: 15px;
+    height: 17px;
+    width: 17px;
+    border-radius: 3px;
+    background: url("/images/nav-expand.png") no-repeat top;
+  }
+
+  .active > .dcjq-icon {
+    background: url("/images/nav-expand.png") no-repeat bottom;
+    border-radius: 3px;
+  }
+
+  .nav-collapse.collapse {
+    display: inline;
+  }
+}

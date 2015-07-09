@@ -8,6 +8,9 @@
     &:focus {
       color: $yellow-base;
     }
+    > .brand-yellow {
+      color: $yellow-base;
+    }
   }
 
   .toggle-sidebar {
