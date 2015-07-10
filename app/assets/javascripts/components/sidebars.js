@@ -12,25 +12,23 @@
       autoExpand:  true,
       classExpand: 'dcjq-current-parent'
     });
-    
+
     $('#sidebar .sub-menu > a').click(function () {
       var o    = ($(this).offset()),
           diff = 250 - o.top;
-      if (diff>0) {
-        $("#sidebar").scrollTo("-="+Math.abs(diff),500);
+      if (diff > 0) {
+        $("#sidebar").scrollTo("-=" + Math.abs(diff), 500);
       } else {
-        $("#sidebar").scrollTo("+="+Math.abs(diff),500);
+        $("#sidebar").scrollTo("+=" + Math.abs(diff), 500);
       }
     });
 
-    // sidebar toggle
-
-    $(".toggle-sidebar").on("click", function() {
+    var toggleTooltip = function() {
       var sidebar        = $('#sidebar > ul').is(":visible");
       var $tooltip       = $(".toggle-sidebar");
       var $tooltip_inner = $(".tooltip-inner");
 
-      if (sidebar) {
+      if (!sidebar) {
         var _message = "Open Sidebar";
         $tooltip.attr("data-original-title", _message);
         $tooltip_inner.text(_message);
@@ -39,7 +37,7 @@
         $tooltip.attr("data-original-title", _message);
         $tooltip_inner.text(_message);
       }
-    });
+    }
 
     var toggleSidebar = function() {
       var wSize = $(window).width();
@@ -74,8 +72,11 @@
     }
 
     var responsiveView = function() {
-      var wSize = $(window).width();
+      var wSize        = $(window).width();
+      var $mainContent = $('#main__site__content');
+      // console.log("HYEYYYY");
       if (wSize < 768) {
+        $mainContent.attr("style", "");
         $('#container').removeClass('sidebar-close');
         $('#sidebar > ul').hide();
       }
@@ -90,16 +91,20 @@
           spacebarenabled:    false,
           cursorborder:       ''
         });
+
         $('#container').removeClass('sidebar-close');
         $('#sidebar > ul').show();
       }
-      console.log("responsiveView was run");
     }
-    $(window).on('load', responsiveView);
-    $(window).on('resize', responsiveView);
+
+    $(window).on("load resize", function() {
+      responsiveView();
+      toggleTooltip();
+    });
 
     $('.toggle-sidebar').on("click", function() {
       toggleSidebar();
+      toggleTooltip();
     });
   });
 })(jQuery);
