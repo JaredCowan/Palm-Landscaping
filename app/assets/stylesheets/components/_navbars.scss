@@ -53,10 +53,15 @@
       }
     }
     .dropdown {
-      > a > .dropdown-img {
-        width: 30px;
-        height: auto;
-        margin: 0 5px;
+      > a.dropdown-img {
+        padding-top: 10px;
+        padding-right: 28px;
+        padding-bottom: 10px;
+        > img {
+          width: 30px;
+          height: auto;
+          margin: 0 5px;
+        }
       }
     }
   }
