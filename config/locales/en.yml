@@ -3,3 +3,10 @@ en:
     name: "Palm Landscaping"
     description: "Palm Landscaping Services by Bob"
     author: "Jared Cowan"
+
+  # l Time.now, format: :post
+  time:
+    formats:
+      default_time: "%l:%M%P"
+      short_date: "%m/%d/%y"
+      date_time: "%m/%d/%y at %l:%M%P"
