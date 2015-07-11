@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/ajax", to: "ajax#load", as: "ajax", defaults: {format: :js}
+
   resources :users, only: [:index, :show], path: "/users"
 
   resources :static_pages, only: :index, path: "/:action", as: ":action"

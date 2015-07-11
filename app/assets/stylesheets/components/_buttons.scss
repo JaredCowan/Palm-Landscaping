@@ -3,9 +3,11 @@
   color: $black-base;
 }
 
-.btn-green,
-.btn-green:hover,
-.btn-green:focus {
+.btn-green {
   background-color: $success;
   color: $white-base;
+  &:hover, &:focus {
+    background-color: $success;
+    color: $white-base;
+  }
 }

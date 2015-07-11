@@ -1,0 +1,3 @@
+console.log("js file loaded");
+var $main_content = $("#main__site__content");
+$main_content.html('<%= escape_javascript(render partial: "/#{params[:hard].gsub("_", "/")}") %>');

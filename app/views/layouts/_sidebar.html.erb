@@ -2,7 +2,7 @@
   <div id="sidebar"  class="nav-collapse nav-sidebar">
     <ul class="sidebar-menu" id="nav-accordion">
       <li>
-        <a href="javascript:;">
+        <a href="<%= url_for :home %>">
           <i class="fa fa-dashboard"></i>
           <span>Dashboard</span>
         </a>
@@ -15,7 +15,7 @@
         </a>
         <ul class="sub">
           <li>
-            <a href="javascript:;">View All</a>
+            <%= link_to "View All", ajax_path(soft: "ajax_load", hard: "users_index"), remote: true %>
           </li>
           <li>
             <a href="javascript:;">Completed Jobs</a>
