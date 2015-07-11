@@ -31,8 +31,12 @@
                     <img alt="avatar" src="<%= image_url "/images/avatar-#{Random.rand(1..4)}.png" %>">
                   </span>
                   <span class="subject">
-                    <span class="from">Jonathan Smith</span>
-                    <span class="time">Just now</span>
+                    <span class="from">
+                      <%= FFaker::Name.name ||= "John Doe" %>
+                    </span>
+                    <span class="time">
+                      3 Hours Ago
+                    </span>
                   </span>
                   <span class="message">
                     Hello, this is an example msg.

@@ -2,3 +2,10 @@
   background-color: $yellow-base;
   color: $black-base;
 }
+
+.btn-green,
+.btn-green:hover,
+.btn-green:focus {
+  background-color: $success;
+  color: $white-base;
+}

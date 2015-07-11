@@ -10,10 +10,13 @@
       background:         '',
       spacebarenabled:    false,
       cursorborder:       '0',
-      zindex:             '1000'
+      zindex:             '9000'
     });
 
     $("[data-toggle='tooltip']").tooltip();
-  });
 
+    setTimeout(function() {
+      $(".module").addClass("loaded");
+    }, 900);
+  });
 })(jQuery);

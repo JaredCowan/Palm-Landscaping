@@ -29,3 +29,29 @@ body {
   padding-top: 70px;
   margin-left: 0;
 }
+
+.module {
+  position: relative;
+  background-color: $black-base;
+  border-radius: $border-radius-large;
+  padding: 5px 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 3px 1px $gray-dark;
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    background-color: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, .9) url("/images/loading.gif") no-repeat center;
+    z-index: 1000;
+  }
+  &.loaded { 
+    &:after {
+      content: none !important;
+    }
+  }
+}

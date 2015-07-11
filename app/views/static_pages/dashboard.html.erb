@@ -1,5 +1,5 @@
 <section class="dashboard">
-  <div class="row state-overview">
+  <div class="row state-overview hidden-xs">
     <div class="col-lg-3 col-sm-6">
       <section class="panel">
         <div class="symbol terques">
@@ -36,7 +36,7 @@
     <div class="col-lg-3 col-sm-6">
       <section class="panel">
         <div class="symbol yellow">
-          <i class="fa fa-shopping-cart"></i>
+          <i class="fa fa-wrench"></i>
         </div>
         <div class="value">
           <h1 class="count3">128</h1>
@@ -44,5 +44,390 @@
         </div>
       </section>
     </div>
-  </div>
-</section>
+  </div> <!-- END .row -->
+
+  <section class="progress-section">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <section class="panel module">
+          <div class="panel-heading">
+            Completed Jobs
+          </div>
+          <div class="panel-body progress-panel">
+            <table class="table table-hover personal-task">
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-important">
+                       <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                       <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-success">
+                       <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                      <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-info">
+                      <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                      <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-warning">
+                      <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                      <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-primary">
+                      <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                      <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-primary">
+                      <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                      <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <span class="badge bg-primary">
+                      <%= number_to_percentage(100, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                      <%= link_to "javascript:;", class: "btn btn-green" do %>
+                        <i class="fa fa-money"></i>
+                        Invoice
+                      <% end %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div> <!-- END .panel-body -->
+        </section> <!-- END .panel -->
+      </div> <!-- END .col-xx-xx -->
+
+      <div class="col-sm-12 col-md-6">
+        <section class="panel module">
+          <div class="panel-heading">
+            Jobs Near Completion
+          </div>
+          <div class="panel-body progress-panel">
+            <table class="table table-hover personal-task">
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-important">
+                       <%= number_to_percentage(99, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-success">
+                       <%= number_to_percentage(99, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-info">
+                      <%= number_to_percentage(98, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-warning">
+                      <%= number_to_percentage(97, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-primary">
+                      <%= number_to_percentage(97, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-primary">
+                      <%= number_to_percentage(95, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>
+                    <%= FFaker::Name.name ||= "John Doe" %>
+                  </td>
+                  <td class="hidden-xs">
+                    <%= "#{Random.rand(1..11)} Hours" %>
+                  </td>
+                  <td>
+                    <span class="badge bg-primary">
+                      <%= number_to_percentage(92, precision: 0) %>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="actions">
+                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
+                        <i class="fa fa-eye"></i>
+                        View
+                      <% end %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div> <!-- END .panel-body -->
+        </section> <!-- END .panel -->
+      </div> <!-- END .col-xx-xx -->
+    </div> <!-- END .row -->
+  </section> <!-- END .progress-section -->
+
+  <section class="graph-section">
+    <div id="morris">
+      <div class="row">
+        <div class="col-lg-6">
+          <section class="panel module">
+            <div class="panel-heading">
+              Sub Contractor Quote vs Invoice Accuracy &amp; Job Count
+            </div>
+            <div class="panel-body">
+              <div id="job-graph" class="graph refresh-graph"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-lg-6">
+          <section class="panel module">
+            <div class="panel-heading">
+              Projected Time Spent vs Actual Time Spent At Jobs &mdash; Past 7 Days
+            </div>
+            <div class="panel-body">
+              <div id="time-graph" class="graph refresh-graph"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-lg-6">
+          <section class="panel module">
+            <div class="panel-heading">
+              Sub Contractor Customer Satisfaction &mdash; Average Rating
+            </div>
+            <div class="panel-body">
+              <div id="customer-graph" class="graph refresh-graph"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-lg-6">
+          <section class="panel module">
+            <div class="panel-heading">
+              Marketing Analytics &mdash; New Customers
+            </div>
+            <div class="panel-body">
+              <div id="marketing-graph" class="graph refresh-graph"></div>
+            </div>
+          </section>
+        </div>
+      </div> <!-- END .row -->
+    </div> <!-- END #moris -->
+  </section> <!-- END .graph-section -->
+</section> <!-- END .dashboard -->
