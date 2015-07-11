@@ -2,14 +2,14 @@
 
   $(document).on("ready", function() {
 
-    $("html").niceScroll({
+    $("html, .dropdown-scrollable .dropdown-menu").niceScroll({
       styler:             "fb",
       cursorcolor:        "#ffcc00",
       cursorwidth:        '6',
       cursorborderradius: '10px',
-      background:         '#404040',
+      background:         '',
       spacebarenabled:    false,
-      cursorborder:       '',
+      cursorborder:       '0',
       zindex:             '1000'
     });
 

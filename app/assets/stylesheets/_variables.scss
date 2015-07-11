@@ -16,45 +16,45 @@ $gray-dark:                          darken($white-base, 79); // #303030
 
 $yellow-base:                                           #fc0;
 
-$verde-green:                                        #8cd600;
-$verde-green-darker:                 darken($verde-green, 3); // #7fc200
-$verde-green-dark:                   darken($verde-green, 7); // #71ad00
+$green:                                        #8cd600;
+$green-darker:                 darken($green, 3); // #7fc200
+$green-dark:                   darken($green, 7); // #71ad00
 
-$verde-blue:                                         #2c3bad;
-$verde-blue-lighter:                                 #0087FD;
-$verde-blue-light:     saturate(lighten($verde-blue, 10), 4); // #3b4cd3
+$blue:                                         #2c3bad;
+$blue-lighter:                                 #0087FD;
+$blue-light:     saturate(lighten($blue, 10), 4); // #3b4cd3
 
-$verde-purple:                                       #7d669e; // #7d669e
-$verde-purple-darker:                                #6B3FA9; // #6B3FA9
-$verde-purple-dark:                                  #541AA6; // #541AA6
+$purple:                                       #7d669e; // #7d669e
+$purple-darker:                                #6B3FA9; // #6B3FA9
+$purple-dark:                                  #541AA6; // #541AA6
 
-$verde-navy-blue:                                    #34495e;
-$verde-navy-blue-darker:         darken($verde-navy-blue, 3); // #2d4052
-$verde-navy-blue-dark:           darken($verde-navy-blue, 6); // #283848
+$navy-blue:                                    #34495e;
+$navy-blue-darker:         darken($navy-blue, 3); // #2d4052
+$navy-blue-dark:           darken($navy-blue, 6); // #283848
 
-$verde-teal:                                         #1abc9c;
-$verde-teal-darker:                   darken($verde-teal, 2); // #18af91
-$verde-teal-dark:                     darken($verde-teal, 8); // #14947b
+$teal:                                         #1abc9c;
+$teal-darker:                   darken($teal, 2); // #18af91
+$teal-dark:                     darken($teal, 8); // #14947b
 
-$verde-primary:                                      #3498db;
-$verde-primary-darker:             darken($verde-primary, 3); // #2691d9
-$verde-primary-dark:               darken($verde-primary, 7); // #2385c7
+$primary:                                      #3498db;
+$primary-darker:             darken($primary, 3); // #2691d9
+$primary-dark:               darken($primary, 7); // #2385c7
 
-$verde-success:                                      #2ecc71;
-$verde-success-darker:             darken($verde-success, 3); // #2bbf6a
-$verde-success-dark:               darken($verde-success, 7); // #27af61
+$success:                                      #2ecc71;
+$success-darker:             darken($success, 3); // #2bbf6a
+$success-dark:               darken($success, 7); // #27af61
 
-$verde-info:                                         #5bc0de;
-$verde-info-darker:                   darken($verde-info, 4); // #48b9da
-$verde-info-dark:                     darken($verde-info, 9); // #33b1d6
+$info:                                         #5bc0de;
+$info-darker:                   darken($info, 4); // #48b9da
+$info-dark:                     darken($info, 9); // #33b1d6
 
-$verde-warning:                                      #f0ad4e;
-$verde-warning-darker:             darken($verde-warning, 4); // #eea43a
-$verde-warning-dark:               darken($verde-warning, 8); // #ed9b27
+$warning:                                      #f0ad4e;
+$warning-darker:             darken($warning, 4); // #eea43a
+$warning-dark:               darken($warning, 8); // #ed9b27
 
-$verde-danger:                                       #e74c3c;
-$verde-danger-darker:               darken($verde-danger, 3); // #e53f2e
-$verde-danger-dark:                 darken($verde-danger, 6); // #e43320
+$danger:                                       #e74c3c;
+$danger-darker:               darken($danger, 3); // #e53f2e
+$danger-dark:                 darken($danger, 6); // #e43320
 
 
 $avatar-background-color:                         $gray-dark;
@@ -115,35 +115,35 @@ $btn-default-color:                              $white-base;
 $btn-default-bg:                                $gray-darker;
 $btn-default-border:                              $gray-dark;
 
-$btn-primary-color:                           $verde-primary;
-$btn-primary-bg:                       $verde-primary-darker;
-$btn-primary-border:                     $verde-primary-dark;
+$btn-primary-color:                           $primary;
+$btn-primary-bg:                       $primary-darker;
+$btn-primary-border:                     $primary-dark;
 
-$btn-success-color:                           $verde-success;
-$btn-success-bg:                       $verde-success-darker;
-$btn-success-border:                     $verde-success-dark;
+$btn-success-color:                           $success;
+$btn-success-bg:                       $success-darker;
+$btn-success-border:                     $success-dark;
 
-$btn-info-color:                                 $verde-info;
-$btn-info-bg:                             $verde-info-darker;
-$btn-info-border:                           $verde-info-dark;
+$btn-info-color:                                 $info;
+$btn-info-bg:                             $info-darker;
+$btn-info-border:                           $info-dark;
 
-$btn-warning-color:                           $verde-warning;
-$btn-warning-bg:                       $verde-warning-darker;
-$btn-warning-border:                     $verde-warning-dark;
+$btn-warning-color:                           $warning;
+$btn-warning-bg:                       $warning-darker;
+$btn-warning-border:                     $warning-dark;
 
-$btn-danger-color:                             $verde-danger;
-$btn-danger-bg:                         $verde-danger-darker;
-$btn-danger-border:                       $verde-danger-dark;
+$btn-danger-color:                             $danger;
+$btn-danger-bg:                         $danger-darker;
+$btn-danger-border:                       $danger-dark;
 
-$btn-link-disabled-color:                         $gray-base;
+$btn-link-disabled-color:                   $gray-base;
 
-$btn-verde-green-bg:                            $verde-green;
-$btn-verde-green-bg-hover:               $verde-green-darker;
-$btn-verde-green-border-color:             $verde-green-dark;
+$btn-green-bg:                            $green;
+$btn-green-bg-hover:               $green-darker;
+$btn-green-border-color:             $green-dark;
 
-$btn-verde-blue-bg:                              $verde-blue;
-$btn-verde-blue-bg-hover:                $verde-green-darker;
-$btn-verde-blue-border-color:              $verde-green-dark;
+$btn-blue-bg:                              $blue;
+$btn-blue-bg-hover:                $green-darker;
+$btn-blue-border-color:              $green-dark;
 
 
 %module {

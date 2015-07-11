@@ -1,3 +1,6 @@
+.state-overview .panel {
+  background-color: $black-base;
+}
 .state-overview .symbol, .state-overview .value {
   display: inline-block;
   text-align: center;
@@ -5,13 +8,14 @@
 
 .state-overview .value  {
   float: right;
-
 }
 
 .state-overview .value h1, .state-overview .value p  {
   margin: 0;
   padding: 0;
-  color: #c6cad6;
+  // color: #c6cad6;
+  // color: #6e87af;
+  color: $teal;
 }
 
 .state-overview .value h1 {
@@ -25,8 +29,8 @@
 
 .state-overview .symbol {
   width: 40%;
+  margin: -1px 0 -1px -1px;
   padding: 25px 15px;
-  -webkit-border-radius: 4px 0px 0px 4px;
   border-radius: 4px 0px 0px 4px;
 }
 
@@ -36,17 +40,17 @@
 }
 
 .state-overview .terques {
-  background: #6ccac9;
+  background: $purple;
 }
 
 .state-overview .red {
-  background: #ff6c60;
+  background: $danger;
 }
 
 .state-overview .yellow {
-  background: #f8d347;
+  background: $yellow-base;
 }
 
 .state-overview .blue {
-  background: #57c8f2;
+  background: $blue-light;
 }

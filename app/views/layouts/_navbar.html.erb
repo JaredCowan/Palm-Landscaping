@@ -14,53 +14,32 @@
     </div> <!-- END .navbar-header -->
 
     <div class="collapse navbar-collapse" id="main-navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="javascript:;">
-            Link
-          </a>
-        </li>
-        <li>
-          <a href="javascript:;">
-            Link
-          </a>
-        </li>
-        <li class="dropdown">
+      <ul class="nav navbar-nav navbar-notif">
+        <li class="dropdown dropdown-scrollable">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Dropdown <span class="caret"></span>
+            <i class="fa fa-envelope-o"></i>
+            <span class="badge">4</span>
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a href="javascript:;">
-                Action
-              </a>
+              <p>Messages</p>
             </li>
-            <li>
-              <a href="javascript:;">
-                Another action
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                Something else here
-              </a>
-            </li>
-            <li role="separator" class="divider">
-              <%# Blank Space  %>
-            </li>
-            <li>
-              <a href="javascript:;">
-                Separated link
-              </a>
-            </li>
-            <li role="separator" class="divider">
-              <%# Blank Space  %>
-            </li>
-            <li>
-              <a href="javascript:;">
-                One more separated link
-              </a>
-            </li>
+            <% 7.times do %>
+              <li>
+                <a href="javascript:;">
+                  <span class="photo">
+                    <img alt="avatar" src="<%= image_url "/images/avatar-#{Random.rand(1..4)}.png" %>">
+                  </span>
+                  <span class="subject">
+                    <span class="from">Jonathan Smith</span>
+                    <span class="time">Just now</span>
+                  </span>
+                  <span class="message">
+                    Hello, this is an example msg.
+                  </span>
+                </a>
+              </li>
+            <% end %>
           </ul> <!-- END .dropdown-menu -->
         </li> <!-- END .dropdown -->
       </ul> <!-- END .navbar-nav -->
