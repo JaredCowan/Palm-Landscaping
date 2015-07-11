@@ -12,17 +12,13 @@
         </a>
       </span> <!-- END .pull-right -->
     </div> <!-- END .panel-heading -->
-    <div class="panel-body">
+    <div class="panel-body" id="search__jobs">
       <div class="row">
         <div class="col-md-12">
-          <div class="input-group">
-            <input type="text" placeholder="Search Here" class="input-sm form-control">
-            <span class="input-group-btn">
-              <a href="javascript:;" class="btn btn-sm btn-success" tabindex="0">
-                Go!
-              </a>
-            </span> <!-- </div> -->
-          </div> <!-- END .input-group -->
+          <div class="form-group search-group">
+            <input type="text" placeholder="Search Jobs" class="search input-sm form-control">
+            <label class="control-label" style="display: none;">Sorry, we couldn't find that job.</label>
+          </div> <!-- END .search-group -->
         </div> <!-- END .col-xx-xx -->
       </div> <!-- END .row -->
       <table class="table table-hover p-table">
@@ -45,21 +41,23 @@
             </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="list">
           <% 15.times do %>
+            <%# "Variables" %>
+            <% completion = number_to_percentage(Random.rand(14..100), precision: 0) %>
             <tr>
-              <td class="p-name">
+              <td class="p-name search__job__name">
                 <a href="javascript:;">
-                  New Dashboard BS3
+                  <%= FFaker::Company.bs %>
                 </a>
                 <br>
-                <small class="visible-sm visible-xs">
+                <small class="visible-sm visible-xs search__job__date">
                   Created <%= l Time.now, format: :short_date %>
                 </small>
-                <small class="hidden-sm hidden-xs">
+                <small class="hidden-sm hidden-xs search__job__date">
                   Created <%= l Time.now, format: :date_time %>
                 </small>
-              </td>
+              </td> <!-- END .p-name -->
               <td class="p-team">
                 <a href="javascript:;">
                   <img alt="image" class="" src="img/chat-avatar.jpg">
@@ -73,11 +71,11 @@
               </td>
               <td class="p-progress">
                 <div class="progress progress-xs">
-                  <div style="width: 87%;" class="progress-bar progress-bar-success">
+                  <div style="width: <%= completion %>;" class="progress-bar progress-bar-success">
                   </div> <!-- END .progress-bar -->
                 </div> <!-- END .progress -->
                 <small>
-                  87% Complete
+                  <%= completion %> Complete
                 </small>
               </td>
               <td>
@@ -101,294 +99,8 @@
               </td>
             </tr>
           <% end %>
-          <!-- <tr>
-            <td class="p-name">
-              <a href="project_details.html">Creative Portfolio</a>
-              <br>
-              <small>Created 21.10.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>65% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Directory & listing</a>
-              <br>
-              <small>Created 2.09.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-2.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>55% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">New Dashboard BS3</a>
-              <br>
-              <small>Created 27.11.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>87% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Creative Portfolio</a>
-              <br>
-              <small>Created 21.10.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>65% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Directory & listing</a>
-              <br>
-              <small>Created 2.09.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-2.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>55% Complete </small>
-            </td>
-            <td>
-              <span class="label label-default">Inactive</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">New Dashboard BS3</a>
-              <br>
-              <small>Created 27.11.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>87% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Creative Portfolio</a>
-              <br>
-              <small>Created 21.10.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>65% Complete </small>
-            </td>
-            <td>
-              <span class="label label-default">Inactive</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Directory & listing</a>
-              <br>
-              <small>Created 2.09.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-2.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>55% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">New Dashboard BS3</a>
-              <br>
-              <small>Created 27.11.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>87% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Creative Portfolio</a>
-              <br>
-              <small>Created 21.10.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>65% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr>
-          <tr>
-            <td class="p-name">
-              <a href="project_details.html">Directory & listing</a>
-              <br>
-              <small>Created 2.09.2014</small>
-            </td>
-            <td class="p-team">
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/chat-avatar2.jpg"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-1.png"></a>
-              <a href="javascript:;"><img alt="image" class="" src="img/pro-ac-2.png"></a>
-            </td>
-            <td class="p-progress">
-              <div class="progress progress-xs">
-                <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-              </div>
-              <small>55% Complete </small>
-            </td>
-            <td>
-              <span class="label label-primary">Active</span>
-            </td>
-            <td>
-              <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-              <a href="javascript:;" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-              <a href="javascript:;" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-            </td>
-          </tr> -->
-        </tbody>
+        </tbody> <!-- END .list -->
       </table> <!-- END .table -->
-    </div>
+    </div> <!-- END .panel-body -->
   </div> <!-- END .panel -->
 </section> <!-- END .job-section -->
