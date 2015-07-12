@@ -1,6 +1,19 @@
 .btn-yellow {
   background-color: $yellow-base;
   color: $black-base;
+  &:hover, &:focus {
+    background-color: $yellow-base;
+    color: $black-base;
+  }
+}
+
+.btn-group {
+  > .btn-yellow {
+    + .btn-yellow.dropdown-toggle {
+      margin-left: .1px;
+      border-left: 1px solid $black-base;
+    }
+  }
 }
 
 .btn-green {
@@ -8,6 +21,15 @@
   color: $white-base;
   &:hover, &:focus {
     background-color: $success;
+    color: $white-base;
+  }
+}
+
+.btn-warning {
+  background-color: $warning;
+  color: $white-base;
+  &:hover, &:focus {
+    background-color: $warning;
     color: $white-base;
   }
 }

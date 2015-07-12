@@ -98,8 +98,9 @@
       > li > a {
         color: $white-base;
         padding: 5px 20px;
+        transition: all .3s;
         > i {
-          padding-right: 5px;
+          margin-right: 5px;
         }
         &:hover,
         &:focus {
@@ -112,7 +113,7 @@
       }
     }
 
-    @media (max-width: $screen-sm-min - 1) {
+    @media (max-width: $screen-xs-max) {
       .open .dropdown-menu {
         > .dropdown-header {
           border-color: $black-base;

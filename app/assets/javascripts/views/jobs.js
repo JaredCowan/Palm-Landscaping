@@ -19,7 +19,7 @@
         if ($search.val().length > 0 && results.length === 0) {
           $searchGroup.addClass("has-error");
           $searchLabel.show();
-        } else if ($search.val().length === 0) {
+        } else if (results.length || $search.val().length === 0) {
           $searchGroup.removeClass("has-error");
           $searchLabel.hide();
         }

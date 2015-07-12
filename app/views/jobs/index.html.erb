@@ -1,43 +1,34 @@
 <section class="job-section">
   <div class="panel">
     <div class="panel-heading">
-      All jobs
-      <span class="pull-right">
-        <a href="javascript:;" tabindex="0" id="refresh-btn" class="btn btn-warning btn-xs" onClick="window.location.reload();">
-          <i class="fa fa-refresh fa-spin"></i>
-          Refresh
-        </a> <!-- END #refresh-btn -->
-        <a href="javascript:;" class=" btn btn-success btn-xs">
-          Create New Project
-        </a>
-      </span> <!-- END .pull-right -->
+      Jobs Overview
     </div> <!-- END .panel-heading -->
-    <div class="panel-body" id="search__jobs">
+    <div class="panel-body has-yellow-scroll" id="search__jobs">
       <div class="row">
         <div class="col-md-12">
           <div class="form-group search-group">
-            <input type="text" placeholder="Search Jobs" class="search input-sm form-control">
+            <input type="search" placeholder="Search Jobs" class="search input-sm form-control" autofocus="true" maxlength="50">
             <label class="control-label" style="display: none;">Sorry, we couldn't find that job.</label>
           </div> <!-- END .search-group -->
         </div> <!-- END .col-xx-xx -->
       </div> <!-- END .row -->
-      <table class="table table-hover p-table">
+      <table class="table table-hover job-table">
         <thead>
           <tr>
             <th>
-              Project Name
+              Customer
+            </th>
+            <th class="hidden-xs">
+              Leader
             </th>
             <th>
-              Team Member
+              Progress
+            </th>
+            <th class="hidden-xs">
+              Status
             </th>
             <th>
-              Project Progress
-            </th>
-            <th>
-              Project Status
-            </th>
-            <th>
-              Custom
+              Actions
             </th>
           </tr>
         </thead>
@@ -45,10 +36,11 @@
           <% 15.times do %>
             <%# "Variables" %>
             <% completion = number_to_percentage(Random.rand(14..100), precision: 0) %>
+            <% status = ["active", "active", "hold"].sample %>
             <tr>
-              <td class="p-name search__job__name">
-                <a href="javascript:;">
-                  <%= FFaker::Company.bs %>
+              <td class="job-name search__job__name">
+                <a href="<%= url_for :job_view %>">
+                  <%= FFaker::Name.name %>
                 </a>
                 <br>
                 <small class="visible-sm visible-xs search__job__date">
@@ -57,45 +49,51 @@
                 <small class="hidden-sm hidden-xs search__job__date">
                   Created <%= l Time.now, format: :date_time %>
                 </small>
-              </td> <!-- END .p-name -->
-              <td class="p-team">
+              </td> <!-- END .job-name -->
+              <td class="job-team hidden-xs">
                 <a href="javascript:;">
-                  <img alt="image" class="" src="img/chat-avatar.jpg">
-                </a>
-                <a href="javascript:;">
-                  <img alt="image" class="" src="img/chat-avatar2.jpg">
-                </a>
-                <a href="javascript:;">
-                  <img alt="image" class="" src="img/pro-ac-1.png">
+                  <img alt="image" class="" src="<%= image_url "/images/avatar-#{Random.rand(1..12)}.png" %>">
                 </a>
               </td>
-              <td class="p-progress">
+              <td class="job-progress">
                 <div class="progress progress-xs">
-                  <div style="width: <%= completion %>;" class="progress-bar progress-bar-success">
+                  <div style="width: <%= completion %>;" class="progress-bar progress-bar-success" role="progressbar" data-value="<%= completion %>" aria-valuenow="<%= completion %>" aria-valuemin="0" aria-valuemax="100">
+                    <%= completion %>
                   </div> <!-- END .progress-bar -->
                 </div> <!-- END .progress -->
-                <small>
-                  <%= completion %> Complete
-                </small>
               </td>
-              <td>
-                <span class="label label-primary">
-                  Active
+              <td class="hidden-xs job-status">
+                <span class="label label-<%= status %>">
+                  <%= status.capitalize %>
                 </span>
               </td>
               <td>
-                <a href="javascript:;" class="btn btn-primary btn-xs">
-                  <i class="fa fa-folder"></i>
-                  View
-                </a>
-                <a href="javascript:;" class="btn btn-info btn-xs">
-                  <i class="fa fa-pencil"></i>
-                  Edit
-                </a>
-                <a href="javascript:;" class="btn btn-danger btn-xs">
-                  <i class="fa fa-trash-o"></i>
-                  Delete
-                </a>
+                <div class="btn-group">
+                  <a href="<%= url_for :job_view %>" class="btn btn-yellow">
+                    <i class="fa fa-eye"></i>
+                    View
+                  </a>
+                  <button type="button" class="btn btn-yellow dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">
+                      Toggle Dropdown
+                    </span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-dark">
+                    <li>
+                      <a href="<%= url_for :job_view %>">
+                        <i class="fa fa-pencil"></i>
+                        Edit
+                      </a>
+                    </li>
+                    <li>
+                      <a href="<%= url_for :job_view %>">
+                        <i class="fa fa-cog fa-spin"></i>
+                        Settings
+                      </a>
+                    </li>
+                  </ul> <!-- END .dropdown-menu -->
+                </div> <!-- END .btn-group -->
               </td>
             </tr>
           <% end %>

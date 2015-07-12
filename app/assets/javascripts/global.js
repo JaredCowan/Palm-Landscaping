@@ -2,7 +2,7 @@
 
   $(document).on("ready", function() {
 
-    $("html, .dropdown-scrollable .dropdown-menu").niceScroll({
+    $("html, .dropdown-scrollable .dropdown-menu, .has-yellow-scroll").niceScroll({
       styler:             "fb",
       cursorcolor:        "#ffcc00",
       cursorwidth:        '6',

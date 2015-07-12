@@ -38,20 +38,4 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   box-shadow: 1px 1px 3px 1px $gray-dark;
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: " ";
-    background-color: rgba(0, 0, 0, .9);
-    background: rgba(0, 0, 0, .9) url("/images/loading.gif") no-repeat center;
-    z-index: 1000;
-  }
-  &.loaded { 
-    &:after {
-      content: none !important;
-    }
-  }
 }
