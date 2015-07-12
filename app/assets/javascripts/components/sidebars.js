@@ -7,20 +7,20 @@
       autoClose:   true,
       saveState:   true,
       disableLink: true,
-      speed:       'slow',
+      speed:       'fast',
       showCount:   false,
       autoExpand:  true,
       classExpand: 'dcjq-current-parent'
     });
 
-    $('#sidebar .sub-menu > a').click(function () {
-      var o    = ($(this).offset()),
-          diff = 250 - o.top;
-      if (diff > 0) {
-        $("#sidebar").scrollTo("-=" + Math.abs(diff), 500);
-      } else {
-        $("#sidebar").scrollTo("+=" + Math.abs(diff), 500);
-      }
+    $('#sidebar .sub-menu > a').click(function(e) {
+      var elmPos = $(this).offset().top;
+      var winPos = $(window).scrollTop();
+      var diff   = (elmPos - winPos) - 47;
+
+      window.setTimeout(function() { 
+        $("#sidebar").scrollTo(Math.abs(diff), 300);
+      }, 450);
     });
 
     var toggleTooltip = function() {

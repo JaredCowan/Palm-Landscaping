@@ -30,7 +30,7 @@
                   <span class="bold">Status </span>
                   <span class="hidden-xs hidden-sm">:</span>
                   <span class="label label-<%= status %>">
-                    <%= status %>
+                    <%= status.titleize %>
                   </span>
                 </p>
               </div> <!-- END .job-row -->
@@ -126,55 +126,56 @@
     </div> <!-- END .col-xx-xx -->
 
     <div class="col-md-4">
-      <div class="panel">
+      <div class="panel job-attachment-section">
         <div class="panel-heading">
           Job Attachments
         </div>
         <div class="panel-body">
-          <h5 class="bold">Priority</h5>
-          <ul class="nav nav-pills nav-stacked labels-info ">
-            <li>
-              <i class="fa fa-circle text-danger"></i> High Priority
-            </li>
-          </ul>
+          <div class="job-priority">
+            <span class="bold">Priority</span>
+            <ul class="inline-list">
+              <li>
+                <i class="fa fa-circle text-danger"></i> High Priority
+              </li>
+            </ul>
+          </div> <!-- END .job-priority -->
           <br>
-          <h5 class="bold">Job files</h5>
-          <ul class="list-unstyled job-files">
-            <li>
-              <a href="javascript:;">
-                <i class="fa fa-file-text"></i>
-                Project_quote.docx
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <i class="fa fa-picture-o"></i>
-                Completed_work.jpg
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <i class="fa fa-envelope-o"></i>
-                Mailed_check.png
-              </a>
-            </li>
-            <li>
-              <a href="javascript:;">
-                <i class="fa fa-file"></i> Contract-07_<%= Time.now.day %>_2015.docx
-              </a>
-            </li>
-          </ul> <!-- END .list-unstyled -->
+          <div class="job-files">
+            <span class="bold">Job files</span>
+            <ul class="list-unstyled">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-file-text"></i>
+                  Project_quote.docx
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-picture-o"></i>
+                  Completed_work.jpg
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-envelope-o"></i>
+                  Mailed_check.png
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-file"></i> Contract-07_<%= Time.now.day %>_2015.docx
+                </a>
+              </li>
+            </ul> <!-- END .list-unstyled -->
+          </div> <!-- END .job-files -->
 
-          <div class="text-center mtop20">
-            <a href="javascript:;" class="btn btn-sm btn-primary">
-              Add files
-            </a>
-            <a href="javascript:;" class="btn btn-sm btn-warning">
-              Report contact
+          <div class="text-center">
+            <a href="javascript:;" class="btn btn-sm btn-yellow">
+              Add Files
             </a>
           </div>
         </div> <!-- END .panel-body -->
-      </div> <!-- END .panel -->
+      </div> <!-- END .panel/.job-attachment-section -->
     </div> <!-- END .col-xx-xx -->
   </div> <!-- END .row -->
 </section> <!-- END .job-section -->

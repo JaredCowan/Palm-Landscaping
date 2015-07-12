@@ -25,6 +25,7 @@
     }
   }
   .table {
+    margin-bottom: 5px;
     tbody {
       > tr {
         transition: all .6s;
@@ -92,16 +93,9 @@
   }
 
   &.job-view-section {
-    .job-heading {
-      background: #41cac0;
-      color: #fff;
-      margin: -6px -3px 5px;
-      text-align: center;
-      font-style: italic;
-      padding: 40px 50px;
-      border-radius: 6px 6px 0 0;
-      font-size: 16px;
-      font-weight: 300;
+    .bold {
+      color: $gray-darker;
+      font-weight: $font-weight-ultra-heavy;
     }
     .job-meta {
       .job-details {
@@ -118,6 +112,36 @@
         float: left;
         margin-bottom: 10px;
         padding: 0 15px;
+        .label {
+          color: $white-base;
+          border-radius: 0;
+          &.label-active {
+            background-color: $success;
+          }
+          &.label-hold {
+            background-color: $danger;
+          }
+        }
+        a {
+          color: $blue-lighter;
+          &:hover, &:focus {
+            color: $blue-light;
+            text-decoration: none;
+          }
+        }
+        span {
+          > a > img, > img {
+            width: 35px;
+            height: 35px;
+            margin: 0 5px; 
+            border-radius: $border-radius-base;
+          }
+        }
+        .job-team {
+          > a {
+            display: inline-block;
+          }
+        }
       }
       @media (max-width: $screen-sm-max) {
         .job-row {
@@ -134,120 +158,79 @@
         }
       }
     }
+    .job-table {
+      tr {
+        > th, > td {
+          vertical-align: middle;
+        }
+        > td:not(.job-actions) {
+          text-shadow: .5px 0 1px $gray-dark;
+        }
+        &.completed:hover {
+          background-color: $success;
+        }
+        &.in-progress:hover {
+          background-color: $info;
+        }
+        &.hold:hover {
+          background-color: $warning;
+        }
+        &.canceled:hover {
+          background-color: $danger;
+        }
+      }
+      .job-label {
+        color: $white-base;
+        > .label {
+          border-radius: 0;
+        }
+        > .label-completed {
+          background-color: $success;
+        }
+        > .label-in-progress {
+          background-color: $info;
+        }
+        > .label-hold {
+          background-color: $warning;
+        }
+        > .label-canceled {
+          background-color: $danger;
+        }
+      }
+    }
   }
-}
-
-// .bio-graph-heading {
-//   background: #41cac0;
-//   color: #fff;
-//   margin: -6px -3px 5px;
-//   text-align: center;
-//   font-style: italic;
-//   padding: 40px 50px;
-//   border-radius: 6px 6px 0 0;
-//   font-size: 16px;
-//   font-weight: 300;
-// }
-
-// .bio-graph-info {
-//   color: #89817e;
-// }
-
-// .bio-graph-info h1 {
-//   font-size: 22px;
-//   font-weight: 300;
-//   margin: 0 0 20px;
-// }
-
-.bio-row {
-  width: 50%;
-  float: left;
-  margin-bottom: 10px;
-  padding:0 15px;
-}
-
-.bio-row p span {
-  width: 100px;
-  display: inline-block;
-}
-
-.job-table th,
-.job-table td {
-  vertical-align: middle !important;
-}
-
-
-.job-team img {
-  width: 35px;
-  height:35px;
-  border-radius: 4px;
-}
-
-.job-progress .progress {
-  margin-bottom: 5px;
-}
-
-.job-name a {
-  font-size:14px;
-  /*font-weight:bold;*/
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.job-details .bio-row p span {
-  width: auto;
-}
-
-.job-details .bio-row p span.bold {
-  width: 100px;
-}
-
-.job-team a {
-  display: inline-block;
-}
-
-.project-heading {
-  font-size: 20px;
-}
-
-.mtop20 {
-  margin-top: 20px;
-}
-
-.job-files li a {
-  margin-bottom: 10px;
-  color: #949494;
-  display: block;
-}
-
-.job-files li i {
-  padding-right: 10px;
-  width: 20px;
-}
-
-.job-tag-list li {
-  display: inline-block;
-  margin:0 5px 7px 0;
-}
-
-.job-tag-list li a {
-  display: inline-block;
-  border: 1px solid #ddd;
-  padding: 3px 10px;
-  color:#797979;
-  border-radius: 4px;
-  font-size:12px;
-}
-
-.job-tag-list li a:hover {
-  background: #ff6c60;
-  border-color: #ff6c60;
-  color:#fff;
-}
-
-.m-thumb img {
-  width: 100%;
-  border:1px solid #ddd;
+  .job-attachment-section {
+    .bold {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+    .job-priority {
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+        > li > i {
+          color: $danger;
+        }
+      }
+    }
+    .job-files {
+      li > a {
+        display: block;
+        margin-bottom: 10px;
+        color: $blue-lighter;
+        > i {
+          width: 20px;
+          color: $gray-darken;
+          padding-right: 10px;
+        }
+        &:hover, &:focus {
+          color: $blue-light;
+          text-decoration: none;
+          > i {
+            color: $gray-darker;
+          }
+        }
+      }
+    } // .job-files
+  } // .job-attachment-section
 }

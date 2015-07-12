@@ -14,7 +14,7 @@ $gray-darker:                        darken($white-base, 17); // #cfcfcf
 $gray-darken:                        darken($white-base, 51); // #787878
 $gray-dark:                          darken($white-base, 79); // #303030
 
-$yellow-base:                                           #fc0;
+$yellow-base:                                           #FFCC00;
 
 $green:                                        #8cd600;
 $green-darker:                 darken($green, 3); // #7fc200
@@ -52,9 +52,9 @@ $warning:                                      #f0ad4e;
 $warning-darker:             darken($warning, 4); // #eea43a
 $warning-dark:               darken($warning, 8); // #ed9b27
 
-$danger:                                       #e74c3c;
-$danger-darker:               darken($danger, 3); // #e53f2e
-$danger-dark:                 darken($danger, 6); // #e43320
+$danger:                                 #ff4c00;
+$danger-darker:               darken($danger, 3); // #f04700
+$danger-dark:                 darken($danger, 6); // #e04300
 
 
 $avatar-background-color:                         $gray-dark;
@@ -106,7 +106,7 @@ $border-radius-small:              ($border-radius-base - 1); // 3px
 $border-radius-large:              ($border-radius-base + 2); // 6px
 
 // Text shadows
-$text-shadow-sm: 1px 1px 1px                     $black-base;
+$text-shadow-sm: 1px 0 1px                     $black-base;
 
 // Buttons
 $btn-font-weight:                          $font-weight-base;
