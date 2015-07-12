@@ -1,3 +1,7 @@
-console.log("js file loaded");
-var $main_content = $("#main__site__content");
-$main_content.html('<%= escape_javascript(render partial: "/#{params[:hard].gsub("_", "/")}") %>');
+window.location.hash = "";
+console.log('js ajax loaded');
+<% replaceElm = "#{params[:replace]}" %>
+var $main_content = $("#<%= replaceElm %>");
+<% filePath = params[:hard].gsub("_", "/").gsub("-", "_") %>
+$main_content.replaceWith('<%= escape_javascript(render partial: "/#{filePath}") %>');
+window.location.hash = "<%= replaceElm %>";

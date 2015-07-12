@@ -1,0 +1,12 @@
+<div class="panel" id="job-task-panel">
+  <div class="panel-heading">
+    Task Details
+  </div>
+  <div class="panel-body">
+    <div class="clearfix">
+      <%= link_to ajax_path(soft: "ajax_load", hard: "jobs_job-tasks", replace: "job-task-panel"), class: "btn btn-yellow btn-block", remote: true do %>
+        Back To View All Task
+      <% end %>
+    </div>
+  </div>
+</div>
