@@ -5,7 +5,15 @@ body {
 }
 
 #main__site__content {
-  padding-top: 70px;
+  padding: 50px 5px 20px;
+  overflow-x: hidden;
+}
+
+@media (min-width: $screen-md-min) {
+  #main__site__content {
+    padding-left: 15px; 
+    padding-right: 15px;
+  }
 }
 
 @media (min-width: $screen-sm-min) {

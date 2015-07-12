@@ -10,3 +10,4 @@ en:
       default_time: "%l:%M%P"
       short_date: "%m/%d/%y"
       date_time: "%m/%d/%y at %l:%M%P"
+      only_date_time: "%m/%d/%y %l:%M%P"

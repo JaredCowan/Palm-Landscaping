@@ -80,18 +80,96 @@
       background-color: $teal;
       text-align: center;
       font-size: $font-size-large;
-      border-tojob-left-radius: $border-radius-large;
+      border-top-left-radius: $border-radius-large;
       border-top-right-radius: $border-radius-large;
     }
-    .panel-body {
+    .panel-body.jobs-table {
       overflow-x: scroll; 
     }
   }
   .btn-group {
     display: flex;
   }
+
+  &.job-view-section {
+    .job-heading {
+      background: #41cac0;
+      color: #fff;
+      margin: -6px -3px 5px;
+      text-align: center;
+      font-style: italic;
+      padding: 40px 50px;
+      border-radius: 6px 6px 0 0;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    .job-meta {
+      .job-details {
+        color: #89817e;
+      }
+      .job-row-wrapper {
+        display: inline-block;
+        width: 100%;
+        min-height: 1px;
+        vertical-align: middle;
+      }
+      .job-row {
+        width: 50%;
+        float: left;
+        margin-bottom: 10px;
+        padding: 0 15px;
+      }
+      @media (max-width: $screen-sm-max) {
+        .job-row {
+          text-align: center;
+          .bold {
+            display: block;
+            padding-bottom: 3px;
+          }
+        }
+      }
+      @media (min-width: $screen-md-min) {
+        .job-row .bold + span {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }
-/*project list*/
+
+// .bio-graph-heading {
+//   background: #41cac0;
+//   color: #fff;
+//   margin: -6px -3px 5px;
+//   text-align: center;
+//   font-style: italic;
+//   padding: 40px 50px;
+//   border-radius: 6px 6px 0 0;
+//   font-size: 16px;
+//   font-weight: 300;
+// }
+
+// .bio-graph-info {
+//   color: #89817e;
+// }
+
+// .bio-graph-info h1 {
+//   font-size: 22px;
+//   font-weight: 300;
+//   margin: 0 0 20px;
+// }
+
+.bio-row {
+  width: 50%;
+  float: left;
+  margin-bottom: 10px;
+  padding:0 15px;
+}
+
+.bio-row p span {
+  width: 100px;
+  display: inline-block;
+}
 
 .job-table th,
 .job-table td {
