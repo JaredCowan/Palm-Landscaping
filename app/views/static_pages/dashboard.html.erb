@@ -55,162 +55,44 @@
           </div>
           <div class="panel-body progress-panel">
             <table class="table table-hover personal-task">
+              <thead>
+                <tr>
+                  <th>
+                    Customer
+                  </th>
+                  <th>
+                    Invoice
+                  </th>
+                  <th>
+                    Actions
+                  </th>
+                </tr>
+              </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-important">
-                       <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                       <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-success">
-                       <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                      <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-info">
-                      <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                      <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-warning">
-                      <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                      <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-primary">
-                      <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                      <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-primary">
-                      <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                      <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <span class="badge bg-primary">
-                      <%= number_to_percentage(100, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                      <%= link_to "javascript:;", class: "btn btn-green" do %>
-                        <i class="fa fa-money"></i>
-                        Invoice
-                      <% end %>
-                  </td>
-                </tr>
+                <% 7.times do %>
+                  <tr>
+                    <td>
+                      <%= FFaker::Name.name ||= "John Doe" %>
+                    </td>
+                    <td>
+                      <span class="badge bg-important">
+                         <%= number_to_currency(Random.rand(115..2368)) %>
+                      </span>
+                    </td>
+                    <td>
+                      <div class="actions">
+                        <%= link_to job_view_path, class: "btn btn-yellow" do %>
+                          <i class="fa fa-eye"></i>
+                          View
+                        <% end %>
+                         <%= link_to job_view_path, class: "btn btn-green hidden-xs" do %>
+                          <i class="fa fa-money"></i>
+                          Invoice
+                        <% end %>
+                      </div>
+                    </td>
+                  </tr>
+                <% end %>
               </tbody>
             </table>
           </div> <!-- END .panel-body -->
@@ -224,155 +106,46 @@
           </div>
           <div class="panel-body progress-panel">
             <table class="table table-hover personal-task">
+              <thead>
+                <tr>
+                  <th>
+                    Customer
+                  </th>
+                  <th>
+                    Billable Time
+                  </th>
+                  <th>
+                    Progress
+                  </th>
+                  <th>
+                    Actions
+                  </th>
+                </tr>
+              </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-important">
-                       <%= number_to_percentage(99, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-success">
-                       <%= number_to_percentage(99, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-info">
-                      <%= number_to_percentage(98, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-warning">
-                      <%= number_to_percentage(97, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-primary">
-                      <%= number_to_percentage(97, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-primary">
-                      <%= number_to_percentage(95, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>
-                    <%= FFaker::Name.name ||= "John Doe" %>
-                  </td>
-                  <td class="hidden-xs">
-                    <%= "#{Random.rand(1..11)} Hours" %>
-                  </td>
-                  <td>
-                    <span class="badge bg-primary">
-                      <%= number_to_percentage(92, precision: 0) %>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="actions">
-                      <%= link_to "javascript:;", class: "btn btn-yellow" do %>
-                        <i class="fa fa-eye"></i>
-                        View
-                      <% end %>
-                  </td>
-                </tr>
+                <% 7.times do %>
+                  <tr>
+                    <td>
+                      <%= FFaker::Name.name ||= "John Doe" %>
+                    </td>
+                    <td>
+                      <%= "#{Random.rand(1..11)}hr #{Random.rand(14..60)}min" %>
+                    </td>
+                    <td>
+                      <span class="badge bg-important">
+                         <%= number_to_percentage(Random.rand(77..99), precision: 0) %>
+                      </span>
+                    </td>
+                    <td>
+                      <div class="actions">
+                        <%= link_to job_view_path, class: "btn btn-yellow" do %>
+                          <i class="fa fa-eye"></i>
+                          View
+                        <% end %>
+                      </div>
+                    </td>
+                  </tr>
+                <% end %>
               </tbody>
             </table>
           </div> <!-- END .panel-body -->

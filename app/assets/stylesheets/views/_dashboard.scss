@@ -36,9 +36,18 @@
             white-space: nowrap;
           }
         }
-        &:hover {
-          color: $yellow-base;
-          background-color: $black-background;
+      }
+      thead {
+        > tr > th {
+          text-align: center;
+        }
+      }
+      tbody {
+        > tr {
+          &:hover {
+            color: $yellow-base;
+            background-color: $black-background;
+          }
         }
       }
     }

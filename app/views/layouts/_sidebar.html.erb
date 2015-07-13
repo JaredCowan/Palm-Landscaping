@@ -18,13 +18,19 @@
             <%= link_to "View all", jobs_path %>
           </li>
           <li>
-            <a href="javascript:;">Completed Jobs</a>
+            <a href="<%= url_for :jobs %>">
+              Completed Jobs
+            </a>
           </li>
           <li>
-            <a href="javascript:;">Uncompleted Jobs</a>
+            <a href="<%= url_for :jobs %>">
+              Uncompleted Jobs
+            </a>
           </li>
           <li>
-            <a href="javascript:;">New Jobs</a>
+            <a href="<%= url_for :jobs %>">
+              New Jobs
+            </a>
           </li>
         </ul> <!-- END .sub -->
       </li> <!-- END .sub-menu -->
@@ -36,7 +42,7 @@
         </a>
         <ul class="sub">
           <li>
-            <%= link_to "View All", ajax_path(soft: "ajax_load", hard: "users_index"), remote: true %>
+            <a  href="javascript:;">View All</a>
           </li>
           <li>
             <a  href="javascript:;">Quotes</a>
