@@ -18,5 +18,25 @@
     setTimeout(function() {
       $(".module").addClass("loaded");
     }, 900);
+
+    $(".fileUploader").dropzone({
+      url: "/",
+      method: "get",
+      autoProcessQueue: false,
+      dictDefaultMessage: "Drop Files to upload",
+      addRemoveLinks: true,
+      acceptedFiles: "image/*",
+      dictResponseError: "Example Uploader",
+      init: function() {
+        this.on("addedfile", function(file) {
+          $(file.previewElement).addClass("dz-success");
+        });
+
+        $('.startFileUpload').on('click', function() {
+          $(".upload-modal").modal('toggle');
+          $('.dz-hidden-input:file').trigger('click');
+        });
+      }
+    });
   });
 })(jQuery);

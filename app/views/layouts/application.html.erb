@@ -23,6 +23,23 @@
 
     <div class="container-fluid" id="main__site__content">
       <%= yield %>
-    </div>
+
+      <div class="modal fade upload-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <form class="fileUploader">
+                <div class="dz-message">
+                  <span></span>
+                </div>
+                <div class="fallback">
+                  <input name="file" type="file" multiple />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> <!-- END .modal -->
+    </div> <!-- END .container-fluid -->
   </body>
 </html>

@@ -215,7 +215,7 @@
     }
     .job-files {
       li > a {
-        display: block;
+        display: inline-block;
         margin-bottom: 10px;
         color: $blue-lighter;
         > i {

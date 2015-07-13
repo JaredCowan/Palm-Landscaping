@@ -6,6 +6,7 @@
 //= require vendor/nicescroll
 //= require vendor/moris-charts
 //= require vendor/list
+//= require vendor/dropzone
 //= require js-routes
 //= require no-autocomplete-rails
 //= require global

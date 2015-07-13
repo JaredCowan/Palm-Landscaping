@@ -38,6 +38,18 @@ body {
   margin-left: 0;
 }
 
+.upload-modal {
+  .modal-content
+  .modal-body,
+  .fileUploader {
+    background-color: $teal;
+    border-radius: $border-radius-large;
+  }
+  .modal-body {
+    padding: 15px 5px;
+  }
+}
+
 .module {
   position: relative;
   background-color: $black-base;
