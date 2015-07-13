@@ -18,28 +18,39 @@
         <li class="dropdown dropdown-scrollable">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-envelope-o"></i>
-            <span class="badge">4</span>
+            <span class="badge">7</span>
           </a>
           <ul class="dropdown-menu">
             <li>
               <p>Messages</p>
             </li>
             <% 7.times do %>
+              <% saying = %w(
+                new_documents_uploaded need_invoice
+                job_completed invoice_paid
+                new_task_added
+                task_completed
+                task_put_on_hold
+                what_type_of_plants_are_needed
+                task_completed:_lawn_mowed
+                task_completed:_hedges_trimmed
+                task_completed:_plantes_watered
+              ).sample.titleize %>
               <li>
                 <a href="javascript:;">
                   <span class="photo">
-                    <img alt="avatar" src="<%= image_url "/images/avatar-#{Random.rand(1..4)}.png" %>">
+                    <img alt="avatar" src="<%= image_url "/images/avatar-#{Random.rand(1..12)}.png" %>">
                   </span>
                   <span class="subject">
                     <span class="from">
-                      <%= FFaker::Name.name ||= "John Doe" %>
+                      <%= FFaker::Name.name %>
                     </span>
                     <span class="time">
-                      3 Hours Ago
+                      <%= time_ago_in_words(Time.now - Random.rand(100..50000)) %> ago
                     </span>
                   </span>
                   <span class="message">
-                    <%= FFaker::Company.bs %>
+                    <%= saying %>
                   </span>
                 </a>
               </li>

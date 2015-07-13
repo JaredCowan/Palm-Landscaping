@@ -33,8 +33,12 @@
         });
 
         $('.startFileUpload').on('click', function() {
+          window.history.pushState({}, "", "view?soft=file_upload&view=popup");
           $(".upload-modal").modal('toggle');
           $('.dz-hidden-input:file').trigger('click');
+          $(".upload-modal").on("hidden.bs.modal", function() {
+            window.history.pushState({}, "", "view");
+          });
         });
       }
     });

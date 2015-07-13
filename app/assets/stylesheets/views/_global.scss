@@ -33,6 +33,11 @@ body {
   }
 }
 
+a.disabled {
+  color: $gray-darker !important;
+  pointer-events: none !important;
+}
+
 .upload-modal {
   .modal-content
   .modal-body,

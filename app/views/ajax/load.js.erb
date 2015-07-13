@@ -1,7 +1,9 @@
-window.location.hash = "";
 console.log('js ajax loaded');
 <% replaceElm = "#{params[:replace]}" %>
 var $main_content = $("#<%= replaceElm %>");
 <% filePath = params[:hard].gsub("_", "/").gsub("-", "_") %>
+<% url_history = "?soft=#{filePath}" %>
 $main_content.replaceWith('<%= escape_javascript(render partial: "/#{filePath}") %>');
-window.location.hash = "<%= replaceElm %>";
+window.history.pushState({}, "", '<%= "view?soft=#{params[:soft]}&hard=#{filePath.split('/')[1]}".html_safe %>');
+
+$(window).scrollTo($("#job-task-panel").offset().top - 80, 0);

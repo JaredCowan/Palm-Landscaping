@@ -24,6 +24,8 @@
           $searchLabel.hide();
         }
       });
+
+      $(".fancybox").fancybox();
     }
   });
 })(jQuery);

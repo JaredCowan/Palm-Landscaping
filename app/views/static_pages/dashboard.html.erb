@@ -60,6 +60,9 @@
                   <th>
                     Customer
                   </th>
+                  <th class="hidden-xs">
+                    Leader
+                  </th>
                   <th>
                     Invoice
                   </th>
@@ -73,6 +76,9 @@
                   <tr>
                     <td>
                       <%= FFaker::Name.name ||= "John Doe" %>
+                    </td>
+                    <td class="hidden-xs">
+                      <%= image_tag "/images/avatar-#{Random.rand(1..12)}.png", style: "width: 40px;" %>
                     </td>
                     <td>
                       <span class="badge bg-important">
@@ -111,6 +117,9 @@
                   <th>
                     Customer
                   </th>
+                  <th class="hidden-xs">
+                    Leader
+                  </th>
                   <th>
                     Billable Time
                   </th>
@@ -127,6 +136,9 @@
                   <tr>
                     <td>
                       <%= FFaker::Name.name ||= "John Doe" %>
+                    </td>
+                    <td class="hidden-xs">
+                      <%= image_tag "/images/avatar-#{Random.rand(1..12)}.png", style: "width: 40px;" %>
                     </td>
                     <td>
                       <%= "#{Random.rand(1..11)}hr #{Random.rand(14..60)}min" %>
