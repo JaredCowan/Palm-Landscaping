@@ -1,136 +1,30 @@
 <div class="panel" id="job-task-panel">
   <div class="panel-heading">
     Task Details
-  </div>
+  </div> <!-- END .panel-heading -->
   <div class="panel-body">
     <div class="clearfix">
       <%= link_to ajax_path(soft: "ajax_load", hard: "jobs_job-tasks", replace: "job-task-panel"), class: "btn btn-yellow btn-block", remote: true do %>
-        Back To View All Task
+      Back To View All Task
       <% end %>
-    </div>
+    </div> <!-- END .clearfix -->
     <ul class="grid cs-style-3">
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img04">
-                    <figcaption>
-                      <h3>Mindblowing</h3>
-                      <span>lorem ipsume </span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img01">
-                    <figcaption>
-                      <h3>Clean & Fresh</h3>
-                      <span>dolor ament</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img02">
-                    <figcaption>
-                      <h3>Flat Concept</h3>
-                      <span>tawseef tasi</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img05">
-                    <figcaption>
-                      <h3>Modern</h3>
-                      <span>dkmosa inc</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img03">
-                    <figcaption>
-                      <h3>Clean Code</h3>
-                      <span>nice concept</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img06">
-                    <figcaption>
-                      <h3>Cheers</h3>
-                      <span>sumon ahmed</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img04">
-                    <figcaption>
-                      <h3>Freshness</h3>
-                      <span>rerum facilis </span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img01">
-                    <figcaption>
-                      <h3>Awesome</h3>
-                      <span>At vero eos</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img02">
-                    <figcaption>
-                      <h3>Music</h3>
-                      <span>atque corrupti </span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img03">
-                    <figcaption>
-                      <h3>Clean Code</h3>
-                      <span>nice concept</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img06">
-                    <figcaption>
-                      <h3>Cheers</h3>
-                      <span>sumon ahmed</span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-                <li>
-                  <figure>
-                    <img src="/images/placeholder.png" alt="img04">
-                    <figcaption>
-                      <h3>Freshness</h3>
-                      <span>rerum facilis </span>
-                      <a class="fancybox" rel="group" href="/images/placeholder.png">Take a look</a>
-                    </figcaption>
-                  </figure>
-                </li>
-              </ul>
-
-            </div>
-  </div>
-</div>
+      <% 15.times do %>
+        <li>
+          <figure>
+            <img src="/images/placeholder.png" alt="img04">
+            <figcaption>
+            <h3>Landscaping</h3>
+              <span>
+                <%= FFaker::Name.name %>
+              </span>
+              <a class="fancybox" rel="group" href="/images/placeholder.png">
+                View Image
+              </a>
+            </figcaption>
+          </figure>
+        </li>
+      <% end %> <!-- END erb li loop -->
+    </ul> <!-- END .grid -->
+  </div> <!-- END .panel-body -->
+</div> <!-- END .panel -->
