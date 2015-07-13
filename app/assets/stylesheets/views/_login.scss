@@ -1,6 +1,16 @@
+.action-login > #main__site__content {
+  margin-left: 0 !important;
+}
+
 @media (max-width: $screen-xs-max) {
-  body.action-login {
-    padding-top: 20px;
+  .action-login > #main__site__content {
+    padding-top: 0 !important;
+  }
+}
+
+@media (min-width: $screen-sm-max) {
+  .action-login > #main__site__content {
+    padding-top: 70px;
   }
 }
 
